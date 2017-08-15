@@ -13,4 +13,4 @@ RUN apt-get update && \
 	apt-get install -y docker-ce && \
  	 apt-get   clean
 VOLUME /var/lib/docker	 
-CMD dockerd -H tcp://0.0.0.0:2375
+CMD dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
